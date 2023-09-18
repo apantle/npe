@@ -19,6 +19,9 @@ var defaults = {
 }
 
 args = merge(defaults, args)
+if (Array.isArray(args.package)) {
+  args.package = args.package[args.package.length - 1]
+}
 if (args.package.startsWith('./')) {
   args.package = path.join(cwd, args.package)
 }

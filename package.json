@@ -1,23 +1,25 @@
 {
   "name": "@apantle/npe",
-  "version": "1.3.0",
+  "version": "1.3.2",
   "description": "Node Package Editor: a CLI for one-off inspection and editing of properties in package.json files.",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
     "lint": "standard --fix"
   },
-  "repository": "https://github.com/zeke/npe",
+  "repository": "https://github.com/apantle/npe",
   "keywords": [
     "package.json",
     "CLI",
     "terminal"
   ],
   "author": "zeke",
-  "contributors": [{
-	"name": "Jesus E. Franco-Martinez",
-	"email": "jesus@levo.mx"
-  }],
+  "contributors": [
+    {
+      "name": "Jesus E. Franco-Martinez",
+      "email": "jesus@levo.mx"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "mocha": "^10.2.0",
