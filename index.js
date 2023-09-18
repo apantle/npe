@@ -13,11 +13,15 @@ var args = require('minimist')(process.argv.slice(2),
   })
 var endOfLine = require('os').EOL
 
+var cwd = process.cwd()
 var defaults = {
-  package: process.cwd() + '/package.json'
+  package: cwd + '/package.json'
 }
 
 args = merge(defaults, args)
+if (args.package.startsWith('./')) {
+  args.package = path.join(cwd, args.package)
+}
 
 var pkg = require(args.package)
 var write = function (file, data) {
